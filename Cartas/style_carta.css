@@ -1,45 +1,61 @@
-body{
+body {
     background: rgb(251,186,63);
     background: radial-gradient(circle, rgba(251,186,63,1) 10%, rgba(186,70,252,1) 100%);
     font-family: fantasy;
     color: white;
 }
-main{
+
+main {
     width: 730px;
     margin: 60px auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.seccion1{
+
+.seccion1 {
     background-color: rgba(255,255,252,0.2);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-button{
+
+button {
     height: 100px;
     width: 100px;
     font-size: 40px;
     color: black;
     font-weight: bold;
-}
-button{
     cursor: pointer;
 }
-.seccion2{
+
+.seccion2 {
     background-color: rgba(255,255,252,0.2);
     width: 250px;
     height: 400px;
-    border-top-right-radius:8px;
-    border-bottom-right-radius:8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     padding: 0 20px;
 }
-.estadisticas{
+
+.estadisticas {
     border: 1px solid white;
     height: 105px;
     border-radius: 8px;
     padding: 8px 20px;
     box-sizing: border-box;
+}
+
+.ir.inicio {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
