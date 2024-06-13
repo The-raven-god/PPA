@@ -54,3 +54,11 @@ main {
 .next-btn {
     right: 10px;
 }
+
+.game {
+    display: none;
+}
+
+.game.active {
+    display: block;
+}
