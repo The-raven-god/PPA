@@ -1,28 +1,33 @@
-const prevBtns = document.querySelectorAll('.prev-btn');
-const nextBtns = document.querySelectorAll('.next-btn');
+document.addEventListener('DOMContentLoaded', () => {
+    const games = document.querySelectorAll('.game');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
 
-prevBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const gameContainer = btn.parentElement;
-        const img = gameContainer.querySelector('img');
-        // Simular cambio de juego hacia atrás
-        // Aquí puedes agregar lógica para cambiar a la imagen del juego anterior
+    function showGame(index) {
+        games.forEach((game, i) => {
+            game.classList.toggle('active', i === index);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : games.length - 1;
+        showGame(currentIndex);
     });
-});
 
-nextBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const gameContainer = btn.parentElement;
-        const img = gameContainer.querySelector('img');
-        // Simular cambio de juego hacia adelante
-        // Aquí puedes agregar lógica para cambiar a la imagen del siguiente juego
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < games.length - 1) ? currentIndex + 1 : 0;
+        showGame(currentIndex);
     });
-});
 
-document.getElementById('loginBtn').addEventListener('click', () => {
-    // Aquí puedes agregar la lógica para abrir el formulario de login
-});
+    showGame(currentIndex);
 
-document.getElementById('profileBtn').addEventListener('click', () => {
-    // Aquí puedes agregar la lógica para redirigir al perfil del usuario
+
+    document.getElementById('loginBtn').addEventListener('click', () => {
+        alert('Login button clicked');
+    });
+
+    document.getElementById('profileBtn').addEventListener('click', () => {
+        alert('Profile button clicked');
+    });
 });
