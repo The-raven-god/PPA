@@ -51,28 +51,21 @@ function voltear(id){
     cartavolteada++;
     console.log(cartavolteada);
     if(cartavolteada == 1){
-        //numero de la carta 1
         carta1 = document.getElementById(id);
         primerResult = numeros[id]
         carta1.innerHTML = primerResult; 
-        //desactivar carta
         carta1.disabled=true;
     }else if(cartavolteada == 2){
-        //numero de la carta 2
         carta2 = document.getElementById(id);
         segundoResult = numeros[id]
         carta2.innerHTML = segundoResult; 
-        //desactivar carta
         carta2.disabled=true;
-        //incrementar movimiento
         movimientos++;
         mostrarmovimientos.innerHTML= 'movimientos: ' + movimientos;
         
         if(primerResult == segundoResult){
-            //contador
             cartavolteada = 0;
 
-            //Puntos
             puntos++;
             mostrarpuntos.innerHTML = 'puntos: '+puntos;
 
@@ -83,7 +76,6 @@ function voltear(id){
                 mostrarmovimientos.innerHTML='movimientos: '+movimientos+' Muy Bien';
             }
         }else{
-            //Mostrar la carta para ver si es correcto o no
             setTimeout(()=>{
                 carta1.innerHTML= ' ';
                 carta2.innerHTML= ' ';

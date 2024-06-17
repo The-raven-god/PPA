@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas</title>
+    <link rel="stylesheet" href="puzzle.css">
+    <script src="puzzle.js"></script>
+</head>
+<body style="background-color: beige;">
+    <br>
+    <div id="board"></div>
+    <h2>Turns: <span id="turns">0</span></h2>
+    <div id="pieces"></div>
+    <select id="level-select" onchange="loadLevel()">
+        <option value="1">Nivel 1</option>
+        <option value="2">Nivel 2</option>
+        <option value="3">Nivel 3</option>
+        <option value="4">Nivel 4</option>
+        <option value="5">Nivel 5</option>
+    </select>
+    <button class="ir inicio" onclick="window.location.href='../home/index.html'">Inicio</button>
+    <button id="solve" onclick="solvePuzzle()">Resolver</button>
+    <h2 id="win-message" style="display: none;">¡Has ganado!</h2>
+</body>
+</html>
+
+
